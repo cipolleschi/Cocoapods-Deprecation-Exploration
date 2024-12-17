@@ -28,5 +28,5 @@ xcodebuild -scheme ReactNative  -destination "generic/platform=iOS" -derivedData
 
 This will build the project in the `.build` folder so we can inspect what has been built. In the path `.build/Build/Products/Debug-iphoneos` we can find the final product of the build. We can observe hat there are two binaries for the `.o` files that have been built. In the `PackageFrameworks` folder, we have the `ReactNative` framework binary.
 
-> ![Error]
+> [!CAUTION]
 > Observe that there are no header files there! This is a problem as it means that a user of the Framework can not import the `ReactRenderer.h` file!
