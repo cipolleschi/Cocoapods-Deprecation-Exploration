@@ -1,7 +1,0 @@
----
-triple:          'x86_64-apple-darwin'
-binary-path:     '/Users/cipolleschi/Tests/ReactNative/.build/Build/Intermediates.noindex/ArchiveIntermediates/ReactNative/InstallationBuildProductsLocation/usr/local/lib/ReactNative.framework/ReactNative'
-relocations:
-  - { offset: 0x26, size: 0x8, addend: 0x0, symName: __ZN8Renderer6renderEv, symObjAddr: 0x0, symBinAddr: 0xF9C, symSize: 0x6 }
-  - { offset: 0x54, size: 0x8, addend: 0x0, symName: __ZN8Renderer6renderEv, symObjAddr: 0x0, symBinAddr: 0xF9C, symSize: 0x6 }
-...
