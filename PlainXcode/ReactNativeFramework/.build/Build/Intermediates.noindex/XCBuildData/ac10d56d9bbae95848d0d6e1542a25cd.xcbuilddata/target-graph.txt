@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'ReactNativeFramework' in project 'ReactNativeFramework'
+➜ Explicit dependency on target 'ReactRenderer' in project 'ReactNativeFramework'
+Target 'ReactRenderer' in project 'ReactNativeFramework' (no dependencies)

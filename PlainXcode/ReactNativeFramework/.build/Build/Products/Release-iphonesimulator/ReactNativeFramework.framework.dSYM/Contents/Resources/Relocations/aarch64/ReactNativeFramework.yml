@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/cipolleschi/Tests/ReactNativeFramework/.build/Build/Products/Release-iphonesimulator/ReactNativeFramework.framework/ReactNativeFramework'
+relocations:     []
+...

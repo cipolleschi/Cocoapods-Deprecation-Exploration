@@ -1,0 +1,38 @@
+{
+  "main_library": {
+    "exported_symbols": [
+      {
+        "data": {
+          "global": [
+            "_ReactRendererVersionString",
+            "_ReactRendererVersionNumber"
+          ]
+        },
+        "text": {
+          "global": [
+            "__ZN8Renderer6renderEv"
+          ]
+        }
+      }
+    ],
+    "flags": [
+      {
+        "attributes": [
+          "not_app_extension_safe"
+        ]
+      }
+    ],
+    "install_names": [
+      {
+        "name": "@rpath/ReactRenderer.framework/ReactRenderer"
+      }
+    ],
+    "target_info": [
+      {
+        "min_deployment": "18.1",
+        "target": "arm64-ios"
+      }
+    ]
+  },
+  "tapi_tbd_version": 5
+}
