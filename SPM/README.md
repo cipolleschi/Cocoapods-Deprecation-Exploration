@@ -8,7 +8,7 @@ The folder contains two projects:
 
 Given that this is a POC, the SPM folder does not contains the full version of React native, but just a module with one of the most complex configurations to verify that we can build it preserving the import paths that we need.
 
-## React Native folder
+## ReactNative folder
 
 To use the React native project, you can double click on the `Package.swift` file. This will open Xcode and you can explore the project.
 
@@ -23,10 +23,33 @@ From Xcode, you can build the **ReactNative** target. In turn, it will build the
 You can build React Native from the command line with the command:
 
 ```bash
-xcodebuild -scheme ReactNative  -destination "generic/platform=iOS" -derivedDataPath .build
+xcodebuild \
+  -scheme ReactNative  \
+  -destination "generic/platform=iOS" \
+  -derivedDataPath .build
 ```
 
 This will build the project in the `.build` folder so we can inspect what has been built. In the path `.build/Build/Products/Debug-iphoneos` we can find the final product of the build. We can observe hat there are two binaries for the `.o` files that have been built. In the `PackageFrameworks` folder, we have the `ReactNative` framework binary.
 
 > [!CAUTION]
 > Observe that there are no header files there! This is a problem as it means that a user of the Framework can not import the `ReactRenderer.h` file!
+
+### TODO:
+- [ ] try to expose also the React Renderer as a `.product` in Swift PM
+- [ ] try to build both frameworks
+- [ ] verify that the headers are exported in the build folder
+- [ ] try to import the frameworks in a Xcode project to see if they works
+- [ ] if they works, try to define another version of package.swift that use binaries and integrate that with the project
+
+## ReactNativeApp folder
+
+The React Native App folder is an iOS app created from Xcode.
+
+To open it, double click on the `ReactNativeApp.xcodeproj` file. The app is integrated with the ReactNative Swift Package locally.
+
+> [!NOTE]
+> You need to close the ReactNative project to properly open this app. Xcode can't handle having both the Swift Package and the Xcode project using the package open at the same time.
+
+The app imports the `ReactRenderer` using the import `<react/renderer/ReactRenderer.h>` in the `SceneDelegate.mm`.
+
+This app is the test bed that we can use to experiment with Swift PM.

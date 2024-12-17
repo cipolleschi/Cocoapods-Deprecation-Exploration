@@ -7,7 +7,7 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
-#import <ReactRenderer/react/renderer/RCTReactRenderer.h>
+#import <react/renderer/ReactRenderer.h>
 
 @interface SceneDelegate ()
 

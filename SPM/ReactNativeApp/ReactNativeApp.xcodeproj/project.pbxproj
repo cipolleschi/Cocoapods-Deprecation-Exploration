@@ -7,24 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD4735402CFFA817001E092F /* ReactNative.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD47353F2CFFA817001E092F /* ReactNative.xcframework */; };
-		CD4735802CFFBF77001E092F /* ReactRenderer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD47357F2CFFBF77001E092F /* ReactRenderer.xcframework */; };
-		CD4735812CFFBF77001E092F /* ReactRenderer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD47357F2CFFBF77001E092F /* ReactRenderer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD677B542D119FE300BD6D93 /* ReactNative in Frameworks */ = {isa = PBXBuildFile; productRef = CD677B532D119FE300BD6D93 /* ReactNative */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CD4735822CFFBF77001E092F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CD4735812CFFBF77001E092F /* ReactRenderer.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CD47348B2CFE031E001E092F /* ReactNativeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,8 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4735802CFFBF77001E092F /* ReactRenderer.xcframework in Frameworks */,
-				CD4735402CFFA817001E092F /* ReactNative.xcframework in Frameworks */,
+				CD677B542D119FE300BD6D93 /* ReactNative in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +85,6 @@
 				CD4734872CFE031E001E092F /* Sources */,
 				CD4734882CFE031E001E092F /* Frameworks */,
 				CD4734892CFE031E001E092F /* Resources */,
-				CD4735822CFFBF77001E092F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,9 +95,7 @@
 			);
 			name = ReactNativeApp;
 			packageProductDependencies = (
-				CD4734A92CFE051A001E092F /* ReactNative */,
-				CD4734AC2CFE05F9001E092F /* ReactNative */,
-				CD4734AF2CFE071A001E092F /* ReactNative */,
+				CD677B532D119FE300BD6D93 /* ReactNative */,
 			);
 			productName = ReactNativeApp;
 			productReference = CD47348B2CFE031E001E092F /* ReactNativeApp.app */;
@@ -145,6 +125,7 @@
 			mainGroup = CD4734822CFE031E001E092F;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				CD677B522D119FE300BD6D93 /* XCLocalSwiftPackageReference "../ReactNative" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CD47348C2CFE031E001E092F /* Products */;
@@ -372,16 +353,15 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		CD677B522D119FE300BD6D93 /* XCLocalSwiftPackageReference "../ReactNative" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../ReactNative;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		CD4734A92CFE051A001E092F /* ReactNative */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ReactNative;
-		};
-		CD4734AC2CFE05F9001E092F /* ReactNative */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ReactNative;
-		};
-		CD4734AF2CFE071A001E092F /* ReactNative */ = {
+		CD677B532D119FE300BD6D93 /* ReactNative */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReactNative;
 		};

@@ -13,7 +13,7 @@ On the other side, it is really pointless to force millions of users to rebuild 
 
 Finally, Cocoapods is a dependency management system (DMS) which we use to configure the Xcode project and workspace to let `xcodebuild` build properly. cocoapods is written in Ruby and, over time, we abused of its flexibility. We now use Cocoapods to do much more than what they should do. For example, we use it to build Codegen, to run Codegen and to configure various flags. The final solution should **factor out** these behaviors that are independent from the DMS we decide to use. Factoring this out will make it easier to change and replace DMS in the future.
 
-## Alternatives
+## Exploration paths
 
 In this Repository, we will explore various alternatives, and you can find a different folder for each alternative. Each folder has its own README.md with a description of the solution and some instructions on how to use it.
 
@@ -21,3 +21,11 @@ In this Repository, we will explore various alternatives, and you can find a dif
 - **Plain Xcode**: Xcode is the Apple IDE and it allow to configure complex projects if needed. We can try to set up a project in a way that consumes files from React Native as symlinks and use it to build from source and to prepare prebuilds.
 - **CMake**: Cmake is a tool that let users configure a project of any complexity. The tehnology that is then used to build the project is independent from Cmake, and we would like to use `xcodebuild`. Cmake is appealing as part of the Android build logic is already described by Cmake and we can share code between the platforms.
 
+## Other approaches
+
+There are other approaches that we can explore, to achieve intermediate results.
+For example, we can keep using Cocoapods to generate prebuilds. This can provide us more time to fid the best alternative to replace Cocoapods, reducing the exposure to Apple whims.
+
+Some possible ways to achieve this:
+1. When we run `pod install`, Cocoapods generates a `Pods.xcodeproj` file in the `Pods` folder. We can try to open that file to see if we can use it as starting point to generate prebuilds.
+2. We can explore some cocoapods plugins like [`cocoapods pack`](https://github.com/square/cocoapods-pack) or [`cocoapods packager`](https://github.com/CocoaPods/cocoapods-packager)
