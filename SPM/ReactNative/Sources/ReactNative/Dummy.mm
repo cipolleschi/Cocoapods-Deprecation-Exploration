@@ -6,7 +6,7 @@
 //
 
 #import "Dummy.h"
-#import <react/renderer/ReactRenderer.hpp>
+#import <react/renderer/ReactRenderer.h>
 
 @implementation Dummy
 
