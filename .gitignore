@@ -1,4 +1,5 @@
 **/.build
+**/.output
 **/Packages
 **/xcuserdata/
 **/DerivedData/
@@ -7,3 +8,6 @@
 **/.netrc
 .DS_Store
 **/.DS_Store
+
+PlainXcode/ReactNativeFramework/.build
+PlainXcode/ReactNativeFramework/.output

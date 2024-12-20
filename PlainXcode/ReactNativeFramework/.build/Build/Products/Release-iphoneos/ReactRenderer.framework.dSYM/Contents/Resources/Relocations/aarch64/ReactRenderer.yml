@@ -1,5 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/cipolleschi/Tests/ReactNativeFramework/.build/Build/Products/Release-iphoneos/ReactRenderer.framework/ReactRenderer'
-relocations:     []
-...
