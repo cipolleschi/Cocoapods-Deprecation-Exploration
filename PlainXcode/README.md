@@ -144,11 +144,30 @@ If we build in Release mode, instead, we don't have the `ReexportedBinaries`. Th
 So far, the Mergeable Libraries does not seem to solve the problem of creating a single `XCFrameworks` for React Native.
 
 #### TODO:
-- [ ] Try to manually move the Header folder from the ReactRenderer framework in the ReactNativeFramework framework and try to import it in the app
-  - [ ] In the Frameworks folder
-  - [ ] In the ReexportedBinaries folder (if in Debug)
-  - [ ] In the main folder (if in Release)
+- [x] Try to manually move the Header folder from the ReactRenderer framework in the ReactNativeFramework framework and try to import it in the app
+  - [x] In the Frameworks folder :x:
+    - This does not work
+  - [x] In the ReexportedBinaries folder :x:
+    - This does not work
+  - [x] In the main folder :white_check_mark:
+    - This works but we need to change the import path to `ReactNativeFrameworks`.
+    - The App builds and run.
+    - We can write a script that moves all the headers from the subframeworks to the main framework
 - [ ] Fix the warnings for the bridging headers and the ModuleMap creation.
+
+### Simplify the Build
+
+I manage to test how to build a unique XCFramework for multiple frameworks.
+
+1. Set mergeable libraries enabled
+2. Build all the targets, including the umbrella target
+3. Move all the headers in the umbrella target
+4. create the XCFrameworks
+
+I organized all these steps in the `build.sh` script
+
+Once the `ReactNativeFrameworks.xcframework` file is ready, drop that framework in the app.
+Make sure to add the `${BUILD_DIR}/${CONFIGURATION}-${PLATFORM_NAME}/ReactNativeFrameworks.framework/Headers` to the `HEADER_SEARCH_PATH` Build Setting of the app.
 
 ## ReactNativeFrameworkTestApp
 

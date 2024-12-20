@@ -12,7 +12,8 @@
 
 - (void)render {
   auto renderer = Renderer();
-  renderer.render();
+  int result = renderer.render(std::string("tree"));
+  NSLog(@"Result is %d", result);
 }
 
 @end

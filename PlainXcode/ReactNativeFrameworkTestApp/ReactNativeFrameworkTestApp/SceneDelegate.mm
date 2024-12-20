@@ -8,6 +8,7 @@
 #import "SceneDelegate.h"
 #import <react/renderer/RCTReactRenderer.h>
 
+
 @interface SceneDelegate ()
 
 @end
@@ -21,7 +22,8 @@
   // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
   
   auto renderer = Renderer();
-  renderer.render();
+  int result = renderer.render(std::string("root"));
+  NSLog(@"The output is %d", result);
   
 }
 

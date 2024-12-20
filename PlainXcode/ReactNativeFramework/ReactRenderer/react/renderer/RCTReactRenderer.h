@@ -8,9 +8,11 @@
 #ifndef RCTReactRenderer_H
 #define RCTReactRenderer_H
 
+#include <string>
+
 class Renderer {
 public:
-  void render();
+  int render(const std::string &tree);
 };
 
 
