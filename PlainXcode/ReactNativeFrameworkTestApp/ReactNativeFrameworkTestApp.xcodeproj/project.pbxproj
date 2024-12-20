@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD47357C2CFFBC4B001E092F /* ReactNativeFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD47357B2CFFBC4B001E092F /* ReactNativeFramework.xcframework */; };
-		CD47357D2CFFBC4B001E092F /* ReactNativeFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD47357B2CFFBC4B001E092F /* ReactNativeFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CD4735842CFFBF9E001E092F /* ReactRenderer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4735832CFFBF9E001E092F /* ReactRenderer.xcframework */; };
-		CD4735852CFFBF9E001E092F /* ReactRenderer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD4735832CFFBF9E001E092F /* ReactRenderer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD677BA82D15CA9700BD6D93 /* ReactRenderer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD677BA62D15CA9700BD6D93 /* ReactRenderer.xcframework */; };
+		CD677BA92D15CA9700BD6D93 /* ReactRenderer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD677BA62D15CA9700BD6D93 /* ReactRenderer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD677BAA2D15CA9700BD6D93 /* ReactNativeFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD677BA72D15CA9700BD6D93 /* ReactNativeFramework.xcframework */; };
+		CD677BAB2D15CA9700BD6D93 /* ReactNativeFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD677BA72D15CA9700BD6D93 /* ReactNativeFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CD47357E2CFFBC4B001E092F /* Embed Frameworks */ = {
+		CD677BA12D15CA5200BD6D93 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD4735852CFFBF9E001E092F /* ReactRenderer.xcframework in Embed Frameworks */,
-				CD47357D2CFFBC4B001E092F /* ReactNativeFramework.xcframework in Embed Frameworks */,
+				CD677BAB2D15CA9700BD6D93 /* ReactNativeFramework.xcframework in Embed Frameworks */,
+				CD677BA92D15CA9700BD6D93 /* ReactRenderer.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,8 +30,8 @@
 
 /* Begin PBXFileReference section */
 		CD47355D2CFFBC3D001E092F /* ReactNativeFrameworkTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeFrameworkTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD47357B2CFFBC4B001E092F /* ReactNativeFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactNativeFramework.xcframework; path = ../ReactNativeFramework/.output/ReactNativeFramework.xcframework; sourceTree = "<group>"; };
-		CD4735832CFFBF9E001E092F /* ReactRenderer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactRenderer.xcframework; path = ../ReactNativeFramework/.output/ReactRenderer.xcframework; sourceTree = "<group>"; };
+		CD677BA62D15CA9700BD6D93 /* ReactRenderer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactRenderer.xcframework; path = ../ReactNativeFramework/.output/ReactRenderer.xcframework; sourceTree = "<group>"; };
+		CD677BA72D15CA9700BD6D93 /* ReactNativeFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactNativeFramework.xcframework; path = ../ReactNativeFramework/.output/ReactNativeFramework.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -60,8 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4735842CFFBF9E001E092F /* ReactRenderer.xcframework in Frameworks */,
-				CD47357C2CFFBC4B001E092F /* ReactNativeFramework.xcframework in Frameworks */,
+				CD677BAA2D15CA9700BD6D93 /* ReactNativeFramework.xcframework in Frameworks */,
+				CD677BA82D15CA9700BD6D93 /* ReactRenderer.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +88,8 @@
 		CD47357A2CFFBC4A001E092F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD4735832CFFBF9E001E092F /* ReactRenderer.xcframework */,
-				CD47357B2CFFBC4B001E092F /* ReactNativeFramework.xcframework */,
+				CD677BA72D15CA9700BD6D93 /* ReactNativeFramework.xcframework */,
+				CD677BA62D15CA9700BD6D93 /* ReactRenderer.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,7 +104,7 @@
 				CD4735592CFFBC3D001E092F /* Sources */,
 				CD47355A2CFFBC3D001E092F /* Frameworks */,
 				CD47355B2CFFBC3D001E092F /* Resources */,
-				CD47357E2CFFBC4B001E092F /* Embed Frameworks */,
+				CD677BA12D15CA5200BD6D93 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +183,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4V9EZM2B6;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}-${PLATFORM_NAME}/ReactRenderer.framework/Headers";
 				INFOPLIST_FILE = ReactNativeFrameworkTestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -210,6 +211,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C4V9EZM2B6;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}-${PLATFORM_NAME}/ReactRenderer.framework/Headers";
 				INFOPLIST_FILE = ReactNativeFrameworkTestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
