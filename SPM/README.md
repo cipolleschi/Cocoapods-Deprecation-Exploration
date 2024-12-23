@@ -41,14 +41,18 @@ This will build the project in the `.build` folder so we can inspect what has be
 > Observe that there are no header files there! This is a problem as it means that a user of the Framework can not import the `ReactRenderer.h` file!
 
 ### TODO:
-- [X] try to expose also the React Renderer as a `.product` in Swift PM
-- [X] try to build both frameworks
-- [X] verify that the headers are exported in the build folder
+- [x] try to expose also the React Renderer as a `.product` in Swift PM
+- [x] try to build both frameworks
+- [x] verify that the headers are exported in the build folder
   - The Header folder has not been created and public headers have not been moved to the artifact.
-- [ ] try to import the frameworks in a Xcode project to see if they works
-- [ ] if they works, try to define another version of package.swift that use binaries and integrate that with the project
+- [x] try to import the frameworks in a Xcode project to see if they works
+- [x] if they works, try to define another version of package.swift that use binaries and integrate that with the project
+- [ ] Try to set the MERGEABLE_LIBRARIES properties to see if we can generate a single binary for the libraries.
 
 I tried to define another product for the ReactNative's `Package.swift`, and I tried to create xcframeworks from them. I verified that xcodebuild does not create the Haeder folder in the `.framework` folder.
+
+However, if we manually copy the Headers folder, it works fine, after setting the Header Search Path to `${BUILD_DIR}/${CONFIGURATION}-${PLATFORM_NAME}/ReactRenderer.framework/Headers`.
+We can probably create a script that inspects the `headerFolderPath` property of the packages we define so that we can then copy them all to the final XCFrameworks.
 
 ## ReactNativeApp folder
 
