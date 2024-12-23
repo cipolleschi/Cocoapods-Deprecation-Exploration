@@ -20,13 +20,19 @@ You can see that there are two folders: **ReactNative** and **ReactRenderer**.
 
 From Xcode, you can build the **ReactNative** target. In turn, it will build the **ReactRenderer** target.
 
-You can build React Native from the command line with the command:
+You can build the frameworks from the command line with the command:
 
 ```bash
 xcodebuild \
   -scheme ReactNative  \
   -destination "generic/platform=iOS" \
   -derivedDataPath .build
+
+xcodebuild \
+  -scheme ReactRenderer  \
+  -destination "generic/platform=iOS" \
+  -derivedDataPath .build
+
 ```
 
 This will build the project in the `.build` folder so we can inspect what has been built. In the path `.build/Build/Products/Debug-iphoneos` we can find the final product of the build. We can observe hat there are two binaries for the `.o` files that have been built. In the `PackageFrameworks` folder, we have the `ReactNative` framework binary.
@@ -35,11 +41,14 @@ This will build the project in the `.build` folder so we can inspect what has be
 > Observe that there are no header files there! This is a problem as it means that a user of the Framework can not import the `ReactRenderer.h` file!
 
 ### TODO:
-- [ ] try to expose also the React Renderer as a `.product` in Swift PM
-- [ ] try to build both frameworks
-- [ ] verify that the headers are exported in the build folder
+- [X] try to expose also the React Renderer as a `.product` in Swift PM
+- [X] try to build both frameworks
+- [X] verify that the headers are exported in the build folder
+  - The Header folder has not been created and public headers have not been moved to the artifact.
 - [ ] try to import the frameworks in a Xcode project to see if they works
 - [ ] if they works, try to define another version of package.swift that use binaries and integrate that with the project
+
+I tried to define another product for the ReactNative's `Package.swift`, and I tried to create xcframeworks from them. I verified that xcodebuild does not create the Haeder folder in the `.framework` folder.
 
 ## ReactNativeApp folder
 
