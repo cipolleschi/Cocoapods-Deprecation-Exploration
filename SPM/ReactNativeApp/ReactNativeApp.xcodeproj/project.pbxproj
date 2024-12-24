@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD677B542D119FE300BD6D93 /* ReactNative in Frameworks */ = {isa = PBXBuildFile; productRef = CD677B532D119FE300BD6D93 /* ReactNative */; };
+		CD677C482D1AFEFA00BD6D93 /* ReactNative.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD677C472D1AFEFA00BD6D93 /* ReactNative.xcframework */; };
+		CD677C492D1AFEFA00BD6D93 /* ReactNative.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD677C472D1AFEFA00BD6D93 /* ReactNative.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD677C4A2D1AFEFA00BD6D93 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD677C492D1AFEFA00BD6D93 /* ReactNative.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CD47348B2CFE031E001E092F /* ReactNativeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD47353F2CFFA817001E092F /* ReactNative.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactNative.xcframework; path = ../ReactNative/.output/ReactNative.xcframework; sourceTree = "<group>"; };
-		CD47357F2CFFBF77001E092F /* ReactRenderer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactRenderer.xcframework; path = ../ReactNativeFramework/.output/ReactRenderer.xcframework; sourceTree = "<group>"; };
+		CD677C472D1AFEFA00BD6D93 /* ReactNative.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactNative.xcframework; path = ../ReactNative/.output/ReactNative.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -42,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD677B542D119FE300BD6D93 /* ReactNative in Frameworks */,
+				CD677C482D1AFEFA00BD6D93 /* ReactNative.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +83,7 @@
 		CD4735382CFFA44C001E092F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD47357F2CFFBF77001E092F /* ReactRenderer.xcframework */,
-				CD47353F2CFFA817001E092F /* ReactNative.xcframework */,
+				CD677C472D1AFEFA00BD6D93 /* ReactNative.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,6 +98,7 @@
 				CD4734872CFE031E001E092F /* Sources */,
 				CD4734882CFE031E001E092F /* Frameworks */,
 				CD4734892CFE031E001E092F /* Resources */,
+				CD677C4A2D1AFEFA00BD6D93 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -95,7 +109,6 @@
 			);
 			name = ReactNativeApp;
 			packageProductDependencies = (
-				CD677B532D119FE300BD6D93 /* ReactNative */,
 			);
 			productName = ReactNativeApp;
 			productReference = CD47348B2CFE031E001E092F /* ReactNativeApp.app */;
@@ -125,7 +138,6 @@
 			mainGroup = CD4734822CFE031E001E092F;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				CD677B522D119FE300BD6D93 /* XCLocalSwiftPackageReference "../ReactNative" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CD47348C2CFE031E001E092F /* Products */;
@@ -168,7 +180,7 @@
 				DEVELOPMENT_TEAM = C4V9EZM2B6;
 				FRAMEWORK_SEARCH_PATHS = Frameworks/;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/Frameworks/ReactRenderer.frameworks/Headers";
+				HEADER_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}-${PLATFORM_NAME}/ReactNative.framework/Headers";
 				INFOPLIST_FILE = ReactNativeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -196,7 +208,7 @@
 				DEVELOPMENT_TEAM = C4V9EZM2B6;
 				FRAMEWORK_SEARCH_PATHS = Frameworks/;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/Frameworks/ReactRenderer.frameworks/Headers";
+				HEADER_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}-${PLATFORM_NAME}/ReactNative.framework/Headers";
 				INFOPLIST_FILE = ReactNativeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -352,20 +364,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		CD677B522D119FE300BD6D93 /* XCLocalSwiftPackageReference "../ReactNative" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../ReactNative;
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CD677B532D119FE300BD6D93 /* ReactNative */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ReactNative;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD4734832CFE031E001E092F /* Project object */;
 }
