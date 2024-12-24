@@ -49,6 +49,8 @@ This will build the project in the `.build` folder so we can inspect what has be
 - [x] if they works, try to define another version of package.swift that use binaries and integrate that with the project
 - [x] Try build the ReactNative.framework only and to move the header there
 - [ ] Figure out how to generate the `_CodeSignature` folder
+- [X] Try to set up distribution for binaries
+- [ ] Explore how to ship Debug and Release binaries
 
 #### 23/12/2024
 I tried to define another product for the ReactNative's `Package.swift`, and I tried to create xcframeworks from them. I verified that xcodebuild does not create the Haeder folder in the `.framework` folder.
@@ -75,6 +77,15 @@ After setting the Header Search Paths to `${BUILD_DIR}/${CONFIGURATION}-${PLATFO
 > 4. Xcode needs the MERGEABLE_LIBRARIES turned on. SPM does not.
 > 5. The SPM Framework is smaller than the Xcode framework.
 
+##### Setting up binary distribution
+
+After creating the XCFramework, is it possible to distribute it through SPM.
+
+It's possible to distribute it together with the Sources (example in the `SPM/ReactNative/Package.swift`) or as a separate swift package (example in the `SPM/ReactNativeBinary/Package.swift`).
+
+The separate Swift Package for the binaries still requires the `${BUILD_DIR}/${CONFIGURATION}-${PLATFORM_NAME}/ReactNative.framework/Headers` header search path, while shipping the prebuild together with the source code seems not to require it.
+
+Building in Debug mode, the binaries are debuggable and we can step into the code easily.
 
 ## ReactNativeApp folder
 
