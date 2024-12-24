@@ -48,7 +48,12 @@ This will build the project in the `.build` folder so we can inspect what has be
 - [x] try to import the frameworks in a Xcode project to see if they works
 - [x] if they works, try to define another version of package.swift that use binaries and integrate that with the project
 - [x] Try build the ReactNative.framework only and to move the header there
-- [ ] Figure out how to generate the `_CodeSignature` folder
+- [X] Figure out how to generate the `_CodeSignature` folder
+    - To codesign the binary, just use the command `codesign --timestamp -s "<signing identity>" ReactNative.framework`
+    - We need to code sign the frameworks before we create the xcframework.
+    - I integrate the sign step in the build.sh script
+    - [ ] Q: signing identity: which one to use? Meta? Should we create a React Native identity?
+    - [ ] Q: How do we load the identity in CI?
 - [X] Try to set up distribution for binaries
 - [ ] Explore how to ship Debug and Release binaries
 
@@ -86,6 +91,11 @@ It's possible to distribute it together with the Sources (example in the `SPM/Re
 The separate Swift Package for the binaries still requires the `${BUILD_DIR}/${CONFIGURATION}-${PLATFORM_NAME}/ReactNative.framework/Headers` header search path, while shipping the prebuild together with the source code seems not to require it.
 
 Building in Debug mode, the binaries are debuggable and we can step into the code easily.
+
+**Update:**
+Shipping everything in a single Swift PM breaks the build scripts and requires some changes in the build script.
+
+Given how cheap is to ship two Package.swift files, one for the source code and one for the binaries, I'd go for the second solution.
 
 ## ReactNativeApp folder
 
