@@ -8,6 +8,7 @@
 **/.netrc
 .DS_Store
 **/.DS_Store
+**/_builds
 
 PlainXcode/ReactNativeFramework/.build
 PlainXcode/ReactNativeFramework/.output
