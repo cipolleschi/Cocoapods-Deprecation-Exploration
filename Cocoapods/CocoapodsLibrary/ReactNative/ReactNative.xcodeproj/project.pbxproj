@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5ECBC5765BF1D2A3442DEBC4 /* Pods_ReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F773DA4398B02F8CD79BFBCE /* Pods_ReactNative.framework */; };
+		92F57F886AE0EDFD8B47BF36 /* Pods_ReactNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D380DF77E4F636DCA5FFF292 /* Pods_ReactNative.framework */; };
 		CD5D72712D4913FF004C0818 /* RCTReactNative.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5D726D2D4913FF004C0818 /* RCTReactNative.h */; };
 		CD5D72722D4913FF004C0818 /* ReactNative.h in Headers */ = {isa = PBXBuildFile; fileRef = CD5D726F2D4913FF004C0818 /* ReactNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD5D72732D4913FF004C0818 /* RCTReactNative.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD5D726E2D4913FF004C0818 /* RCTReactNative.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22CD7A19BB315A756D138DA2 /* Pods-ReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative.debug.xcconfig"; path = "Target Support Files/Pods-ReactNative/Pods-ReactNative.debug.xcconfig"; sourceTree = "<group>"; };
-		87FDAAD5EACDBA58A5DCAE9B /* Pods-ReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative.release.xcconfig"; path = "Target Support Files/Pods-ReactNative/Pods-ReactNative.release.xcconfig"; sourceTree = "<group>"; };
+		1FC2DEDDF8194F8BEC43CAD0 /* Pods-ReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative.release.xcconfig"; path = "Target Support Files/Pods-ReactNative/Pods-ReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		CD5D725E2D4910FA004C0818 /* ReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5D726D2D4913FF004C0818 /* RCTReactNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTReactNative.h; sourceTree = "<group>"; };
 		CD5D726E2D4913FF004C0818 /* RCTReactNative.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTReactNative.mm; sourceTree = "<group>"; };
 		CD5D726F2D4913FF004C0818 /* ReactNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactNative.h; sourceTree = "<group>"; };
-		F773DA4398B02F8CD79BFBCE /* Pods_ReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D380DF77E4F636DCA5FFF292 /* Pods_ReactNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44206BE1323AB0176D9A3B0 /* Pods-ReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNative.debug.xcconfig"; path = "Target Support Files/Pods-ReactNative/Pods-ReactNative.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,28 +28,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ECBC5765BF1D2A3442DEBC4 /* Pods_ReactNative.framework in Frameworks */,
+				92F57F886AE0EDFD8B47BF36 /* Pods_ReactNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5BC9CB33779A8FD2DF752086 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F773DA4398B02F8CD79BFBCE /* Pods_ReactNative.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CD5D72542D4910FA004C0818 = {
 			isa = PBXGroup;
 			children = (
 				CD5D72702D4913FF004C0818 /* ReactNative */,
 				CD5D725F2D4910FA004C0818 /* Products */,
 				D3B70DA7DFE40BC047782B31 /* Pods */,
-				5BC9CB33779A8FD2DF752086 /* Frameworks */,
+				FCFCE53A1F0E4212C43F76C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,10 +66,18 @@
 		D3B70DA7DFE40BC047782B31 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				22CD7A19BB315A756D138DA2 /* Pods-ReactNative.debug.xcconfig */,
-				87FDAAD5EACDBA58A5DCAE9B /* Pods-ReactNative.release.xcconfig */,
+				F44206BE1323AB0176D9A3B0 /* Pods-ReactNative.debug.xcconfig */,
+				1FC2DEDDF8194F8BEC43CAD0 /* Pods-ReactNative.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FCFCE53A1F0E4212C43F76C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D380DF77E4F636DCA5FFF292 /* Pods_ReactNative.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD5D72642D4910FA004C0818 /* Build configuration list for PBXNativeTarget "ReactNative" */;
 			buildPhases = (
-				4D1D0214E98454C8677043D2 /* [CP] Check Pods Manifest.lock */,
+				F0906A260848D34951ABBB48 /* [CP] Check Pods Manifest.lock */,
 				CD5D72592D4910FA004C0818 /* Headers */,
 				CD5D725A2D4910FA004C0818 /* Sources */,
 				CD5D725B2D4910FA004C0818 /* Frameworks */,
@@ -158,7 +158,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D1D0214E98454C8677043D2 /* [CP] Check Pods Manifest.lock */ = {
+		F0906A260848D34951ABBB48 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,7 +196,7 @@
 /* Begin XCBuildConfiguration section */
 		CD5D72652D4910FA004C0818 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22CD7A19BB315A756D138DA2 /* Pods-ReactNative.debug.xcconfig */;
+			baseConfigurationReference = F44206BE1323AB0176D9A3B0 /* Pods-ReactNative.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -229,7 +229,7 @@
 		};
 		CD5D72662D4910FA004C0818 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87FDAAD5EACDBA58A5DCAE9B /* Pods-ReactNative.release.xcconfig */;
+			baseConfigurationReference = 1FC2DEDDF8194F8BEC43CAD0 /* Pods-ReactNative.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
