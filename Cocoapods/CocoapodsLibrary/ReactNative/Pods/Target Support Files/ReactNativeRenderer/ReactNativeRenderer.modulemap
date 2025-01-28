@@ -1,0 +1,6 @@
+framework module ReactNativeRenderer {
+  umbrella header "ReactNativeRenderer-umbrella.h"
+
+  export *
+  module * { export * }
+}

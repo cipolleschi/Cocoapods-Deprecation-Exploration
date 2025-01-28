@@ -29,3 +29,5 @@ For example, we can keep using Cocoapods to generate prebuilds. This can provide
 Some possible ways to achieve this:
 1. When we run `pod install`, Cocoapods generates a `Pods.xcodeproj` file in the `Pods` folder. We can try to open that file to see if we can use it as starting point to generate prebuilds.
 2. We can explore some cocoapods plugins like [`cocoapods pack`](https://github.com/square/cocoapods-pack) or [`cocoapods packager`](https://github.com/CocoaPods/cocoapods-packager)
+3. ~~We can try to create a React Native project, using the Cocoapods infrastructure and try to build React Native as if it was a library with Cocoapods dependencies. And see where the items ends up. This is what we are exploring in the Cocoapods folder.~~
+Tested hp 3 and it doesn't work: Cocoapods does not merges the symbols of individual frameworks into the final one, so this is not a good solution.

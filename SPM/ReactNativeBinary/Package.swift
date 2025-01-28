@@ -12,6 +12,9 @@ let package = Package(
             targets: ["ReactNative"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/softwaremansion/react-native-reanimated.git", from: "5.0.0")
+    ],
     targets: [
         .binaryTarget(
           name: "ReactNative",
