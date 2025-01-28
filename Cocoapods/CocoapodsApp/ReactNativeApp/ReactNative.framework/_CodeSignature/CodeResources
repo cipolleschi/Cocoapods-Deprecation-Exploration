@@ -4,36 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/ReactNative.h</key>
-		<data>
-		xn1p0GySyZydDsu7J8Y0VYTpq88=
-		</data>
 		<key>Info.plist</key>
 		<data>
-		etEUXad4/r8z+fbW9Bi9DAEGb6Q=
-		</data>
-		<key>Modules/module.modulemap</key>
-		<data>
-		GAxV2V0kH+tOSZSzqXbbhncNqm8=
+		8dZn1He4Ej8FdJUpsJy9umkjaUU=
 		</data>
 	</dict>
 	<key>files2</key>
-	<dict>
-		<key>Headers/ReactNative.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2HdZqL17BpD7enBRQLT0GAMMkSMJ8vk7tH1L9dm4m/E=
-			</data>
-		</dict>
-		<key>Modules/module.modulemap</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zkkSvS2OSYjvStC2L2VkUJ6NRv+FaCIx+JfxokKjXQU=
-			</data>
-		</dict>
-	</dict>
+	<dict/>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

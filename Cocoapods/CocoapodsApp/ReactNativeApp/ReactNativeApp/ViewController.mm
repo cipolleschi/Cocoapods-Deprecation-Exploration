@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import <ReactNative/ReactNativeRenderer/ReactRenderer.h>
+#import <ReactNative/react/renderer/ReactRenderer.h>
 
 @interface ViewController ()
 
@@ -18,7 +18,7 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view.
   self.view.backgroundColor = [UIColor redColor];
-  
+//  
   auto renderer = Renderer();
   renderer.render();
 }

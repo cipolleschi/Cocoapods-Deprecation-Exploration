@@ -12,3 +12,5 @@
 
 PlainXcode/ReactNativeFramework/.build
 PlainXcode/ReactNativeFramework/.output
+
+**/Pods
