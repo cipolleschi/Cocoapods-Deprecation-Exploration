@@ -10,7 +10,7 @@ let package = Package(
         .library(
             name: "ReactNative",
             type: .dynamic,
-            targets: ["ReactNative"]
+            targets: ["ReactNative", "React"]
         ),
     ],
     targets: [
@@ -35,5 +35,16 @@ let package = Package(
             .linkedFramework("Foundation")
           ]
         ),
+        .target(
+          name: "React",
+          dependencies: [],
+          path: "Sources/React",
+          sources: ["."],
+          publicHeadersPath: ".",
+          linkerSettings: [
+            .linkedFramework("Foundation"),
+            .linkedFramework("UIKit")
+          ]
+        )
     ]
 )

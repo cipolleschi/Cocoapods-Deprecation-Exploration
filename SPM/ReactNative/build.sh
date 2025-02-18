@@ -20,20 +20,24 @@ xcodebuild \
 # Create Headers folder
 mkdir -p \
   .build/Build/Products/Debug-iphoneos/PackageFrameworks/ReactNative.framework/Headers/react/renderer \
-  .build/Build/Products/Debug-iphonesimulator/PackageFrameworks/ReactNative.framework/Headers/react/renderer
+  .build/Build/Products/Debug-iphonesimulator/PackageFrameworks/ReactNative.framework/Headers/react/renderer \
+  .build/Build/Products/Debug-iphoneos/PackageFrameworks/ReactNative.framework/Headers/React \
+  .build/Build/Products/Debug-iphonesimulator/PackageFrameworks/ReactNative.framework/Headers/React
 
 # Copy headers
 echo "\n>>> Copying the Headers\n"
 cp -R Sources/ReactRenderer/cpp/react/renderer/*.h .build/Build/Products/Debug-iphoneos/PackageFrameworks/ReactNative.framework/Headers/react/renderer/
 cp -R Sources/ReactRenderer/cpp/react/renderer/*.h .build/Build/Products/Debug-iphonesimulator/PackageFrameworks/ReactNative.framework/Headers/react/renderer/
+cp -R Sources/React/*.h .build/Build/Products/Debug-iphonesimulator/PackageFrameworks/ReactNative.framework/Headers/React
+
 
 # Sign the .framework files
-if [[ ! -z $1 ]]; then
-  echo "\n>>> Signing the frameworks\n"
-  IDENTITY=$1
-  codesign --timestamp -s "$IDENTITY" .build/Build/Products/Debug-iphoneos/PackageFrameworks/ReactNative.framework
-  codesign --timestamp -s "$IDENTITY" .build/Build/Products/Debug-iphonesimulator/PackageFrameworks/ReactNative.framework
-fi
+# if [[ ! -z $1 ]]; then
+#   echo "\n>>> Signing the frameworks\n"
+#   IDENTITY=$1
+#   codesign --timestamp -s "$IDENTITY" .build/Build/Products/Debug-iphoneos/PackageFrameworks/ReactNative.framework
+#   codesign --timestamp -s "$IDENTITY" .build/Build/Products/Debug-iphonesimulator/PackageFrameworks/ReactNative.framework
+# fi
 
 # Remove .output folder
 rm -rf .output
